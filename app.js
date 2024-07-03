@@ -49,6 +49,7 @@ function serchCuntrie() {
     let offitalName = document.getElementById("offitalName");
     let name = document.getElementById("name");
     let img = document.getElementById("img");
+    let about = document.getElementById("about");
 
     fetch(`https://restcountries.com/v3.1/name/${searchValue}`)
         .then(res => res.json())
@@ -58,6 +59,15 @@ function serchCuntrie() {
                 name.innerText = obj.name.common;
                 img.innerHTML = `<img src="${obj.flags.png}" alt="Flag of ${obj.name.common}">`;
                 mapUrl = obj.maps.googleMaps;  // Store the Google Maps URL
+                // Add about section details
+                about.innerHTML = `
+                    <strong>Region:</strong> ${obj.region}<br>
+                    <strong>Subregion:</strong> ${obj.subregion}<br>
+                    <strong>Capital:</strong> ${obj.capital}<br>
+                    <strong>Population:</strong> ${obj.population}<br>
+                    <strong>Area:</strong> ${obj.area} km²<br>
+                    <strong>Languages:</strong> ${Object.values(obj.languages).join(', ')}
+                `;
             });
         })
         .catch(error => {
