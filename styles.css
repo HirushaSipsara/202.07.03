@@ -1,0 +1,62 @@
+body {
+    background-image: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #343a40;
+}
+
+.custom-input {
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #ffecd2, #fcb69f);
+    border: 1px solid #ff7f50;
+    color: #fff;
+}
+
+.custom-btn {
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #ff7f50, #ff6347);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #ff6347;
+}
+
+.custom-card {
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #e0f7fa, #80deea);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.custom-card .card-title {
+    color: #006064;
+}
+
+.custom-card .card-subtitle {
+    color: #00796b;
+}
+
+#img {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-table {
+    background-image: linear-gradient(to right, #ffe0b2, #ffcc80);
+    border: 1px solid #ffb74d;
+}
+
+.table-striped-columns tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 235, 204, 0.8);
+}
+
+.table-striped-columns tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 204, 153, 0.8);
+}
